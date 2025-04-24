@@ -1,6 +1,13 @@
+local tasks = require("data.tasks")
+
 actions = {
     ["1"] = function()
-        print("Selected: Check all tasks")
+        for i, task in ipairs(tasks) do
+            print("Task number: " .. i)
+            print("Text: " .. task.text)
+            print("Status: " .. task.status)
+            print("+++++++++++++++++++++++++++++++")
+        end
         
     end,
     ["2"] = function()
